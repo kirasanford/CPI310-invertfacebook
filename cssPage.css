@@ -1,3 +1,8 @@
+body{
+	background: #041144;
+	background: linear-gradient(90deg, #299386, #166781, #041144);
+}
+
 hr{
 	border:0;
 	border-top:1px solid #eee;
@@ -56,16 +61,6 @@ h3.nameHead{
 	font-family: 'Merriweather', serif;
 	text-align: center;
 	color: #CB2979;
-}
-
-a {
-	text-decoration:none;
-	color: #041144;
-	font-family: 'Lato', sans-serif;
-}
-
-a:hover {
-	color: #B6362F;
 }
 
 /*the paragraph classes are for the body and are the same for the most part throughout, until
@@ -145,7 +140,48 @@ img.avatar:hover {
   display: table;
 }
 
-body{
-	background: #041144;
-	background: linear-gradient(90deg, #299386, #166781, #041144);
+/*showcase games*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.gameColumn {
+  float: left;
+  width: 25%;
+  margin-bottom: 10px;
+  padding: 0 8px;
+}
+
+.gameColumn:hover {
+    opacity: 0.7;
+	text-decoration:none;
+}
+
+.gameCard {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.gameContainer {
+  padding: 16px;
+}
+
+.gameContainer::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+a.gameLink {
+	text-decoration:none;
+	color: #041144;
+	font-family: 'Lato', sans-serif;
+}
+
+a.gameLink:hover {
+	text-decoration:none;
+	color: #CB2979;
 }
