@@ -107,9 +107,8 @@ app.post("/message", async (req, res) => {
     return res.render("Index", { error: "message not provided" });
   }
   await db.run(
-    "INSERT INTO messages (message, id) VALUES (?, ?)",
+    "INSERT INTO messages (message) VALUES (?)",
     req.body.message,
-    req.user.id
   );
   res.redirect("/");
 });
