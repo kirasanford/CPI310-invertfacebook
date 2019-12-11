@@ -1,4 +1,4 @@
-<html>
+	<html>
 <head>
 	<title>Welcome Page</title>
 	<meta charset="UTF-8">
@@ -45,7 +45,6 @@
 		<div class="textBox">
 			<h4 style="font-size: 15px"> Please feel free to browse the highlighted options for gameplay ! </h4>
 			<a href="Sudoku.html">Sudoku</a> -
-			<a href="WordSearch.html">Word Search</a> 
 			<a href="MineSweeper.html">Mine Sweeper</a>
 			<a href="Fishing.html">Fishing</a>
 		</div>
@@ -55,13 +54,11 @@
 			<table>
 				<tr>
 					<th>
-						<ul>
-							{{#each messages }}
-								<li> 
-									<p="teamEx">{{this.id}} &nbsp;{{this.message}} </p>
-								</li>
-							{{/each}}
-						</ul>
+							{{#if user }}
+								<h2> 
+									{{user.name}}
+								</h2>
+							{{/if}}						
 					</th>
 					<th>
 						<form action = "message" method = "POST" align="right">
@@ -74,21 +71,25 @@
 						</form>
 						</th>
 					</tr>
-					<tr>
-					<th>
-					</th>
-						<th>
-							{{#if user }}
-								<h2> 
-									{{user.name}}
-								</h2>
-							{{/if}}
-						</th>
-					</tr>
 				</table>
-			</div>
+			</div> 	
 		</th>
 	</tr>
 </table>
+<div class="chatbox" align = "center">
+	<table>
+		<tr>
+			<th>
+				<ul>
+					{{#each messages }}
+						<li>
+								{{user.name}} {{ this.message}} 
+						</li>
+					{{/each}}
+				</ul>						
+			</th>
+		</tr>
+	</table>
+</div>
 </body>
 </html>
