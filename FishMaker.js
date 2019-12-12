@@ -196,10 +196,10 @@ function EggHunt()
   {
     window.alert("Egg already acquired.");
   }
-  if(fish >= 1000 && egghold == 0)
+  if(fish >= 100 && egghold == 0)
   {
       document.getElementById('EggBin').src = document.getElementById('eggpeak').src;
-      fish = fish - 1000;
+      fish = fish - 100;
       egghold = 1;
       document.getElementById('EggHunt').innerHTML = "Egg Acquired";
       document.getElementById('ConsumeButton').innerHTML = "Feed Egg";
@@ -208,7 +208,7 @@ function EggHunt()
       document.getElementById('ConsumeButtonAll').innerHTML = "Feed All";
       window.alert("Egg acquired.");
   }
-  if(fish < 1000 && egghold == 0)
+  if(fish < 100 && egghold == 0)
   {
     window.alert("Not enough fish");
   }
@@ -303,7 +303,7 @@ function ConsumeTimeAll()
 }
 function HatchTime()
 {
-  if(consume >= 500 && message == 0 && egghold == 1)
+  if(consume >= 100 && message == 0 && egghold == 1)
   {
     message = 1;
     document.getElementById('EggBin').src = document.getElementById('dragonsmall').src;
@@ -312,7 +312,7 @@ function HatchTime()
     document.getElementById('ConsumeButtonBig').innerHTML = "Feed HB(100)";
     window.alert("Beast busts out");
   }
-  if(consume >= 1500 && message == 1 && egghold == 1)
+  if(consume >= 500 && message == 1 && egghold == 1)
   {
     message = 2;
     document.getElementById('EggBin').src = document.getElementById('dragonmedium').src;
@@ -321,7 +321,7 @@ function HatchTime()
     document.getElementById('ConsumeButtonBig').innerHTML = "Feed YB(100)";
     window.alert("Hatchling is growing");
   }
-  if(consume >= 2000 && message == 2 && egghold == 1)
+  if(consume >= 1000 && message == 2 && egghold == 1)
   {
     message = 3;
     document.getElementById('EggBin').src = document.getElementById('dragonbig').src;
@@ -330,7 +330,7 @@ function HatchTime()
     document.getElementById('ConsumeButtonBig').innerHTML = "Feed AB(100)";
     window.alert("The beast grows in power");
   }
-  if(consume >= 5000 && message == 3 && egghold == 1)
+  if(consume >= 2000 && message == 3 && egghold == 1)
   {
     message = 4;
     document.getElementById('EggBin').src = document.getElementById('dragonfinal').src;
